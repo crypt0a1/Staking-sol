@@ -206,6 +206,13 @@
   display: block;
 }
 
+.sol-token {
+  display: block;
+}
+.sol-token-display {
+  display: none;
+}
+
 @media (max-width:1150px) {
   .stakingForm {
     flex-wrap: wrap;
@@ -288,5 +295,51 @@
 
   .foot-hide {
     display: none;
+  }
+
+  .sol-status {
+    margin-inline: 20% !important;
+  }
+  .staking-section {
+    padding-top: 0px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .sol-status {
+    margin-inline: 10% !important;
+    width: 70% !important;
+  }
+  .sol-rising {
+    padding: 0px !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .sol-token {
+    display: none !important;
+  }
+  .sol-token-display {
+    display: block !important;
+  }
+  .sol-rising {
+    padding: 0px !important;
+  }
+  .sol-status {
+    margin-inline: 0% !important;
+    width: 80% !important;
+  }
+  .statusForm {
+    width: 100% !important;
+    margin-inline: 10%;
+  }
+  .Info-section {
+    padding: 0px !important;
+  }
+  .nftBoxForm {
+    margin-top: 150px !important;
+  }
+  .ref-btn-group {
+    padding-left: 15px !important;
   }
 }

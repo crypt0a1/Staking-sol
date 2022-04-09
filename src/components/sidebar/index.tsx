@@ -26,6 +26,20 @@ const Container = styled.div<{
     transition-duration: 1s;
     z-index: 3;
 `
+const Text = styled.div<{
+    fontSize?: string
+    fontColor?: string
+    fontFamily?: string
+    angle?: string
+}>`
+    transform: 0;
+    font-family: ${({fontFamily}) => fontFamily??'Verdana,sans-serif'};
+    font-size: ${({fontSize}) => fontSize??'14px'};
+    font-weight: 300px;
+    color: ${({fontColor}) => fontColor??'white'} ;
+    letter-spacing: 2px;
+    transform: ${({angle}) => angle};
+`
 
 const Sidebar = (props:any) => {
 
@@ -52,6 +66,9 @@ const Sidebar = (props:any) => {
                 </div>
                 <div className="bottom-border foot-display">
                     <Button>Solscan</Button>                    
+                </div>
+                <div className="bottom-border sol-token-display">
+                     <Text fontSize="30px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>                   
                 </div>
             </div>     
         </Container>      

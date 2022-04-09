@@ -93,6 +93,8 @@ const DESCRIPTION = styled.p<{
     font-size: ${({fontSize}) => fontSize??'18px'};
     color: white;
     letter-spacing: 1px;
+    font-family: Diatype, sans-serif;
+    font-weight: 300;
     line-height: 35px;
     margin: 0px;
 `
@@ -151,7 +153,9 @@ const WithdrawBtn = styled.button<{
     }
 `
 
-const Input = styled.input`
+const Input = styled.input<{
+    margin?: string
+}>`
     background: rgba(147,69,234,.3);
     border: 1px solid #9345ea;
     border-radius: 10px;
@@ -159,6 +163,7 @@ const Input = styled.input`
     color: #e4e4e4;
     margin: 0 15px 0 30px;
     padding: 8px 20px;
+    margin: ${({margin}) => margin};
 `
 
 const Dashboard = () => {
@@ -197,7 +202,7 @@ const Dashboard = () => {
                     </DESCRIPTION>
                 </DIV>                
                 <DIV className="sol-status">
-                    <StatisticsForm>
+                    <StatisticsForm className="statusForm">
                         <TITLE fontSize="30px" margin="15px 0 0 0">
                             Statistics
                         <hr className="static-hr" />                                 
@@ -270,7 +275,7 @@ const Dashboard = () => {
                             </DIV>
                             <DIV className="flex-wrap" display="flex" margin="20px 20px 0 0" alignItem="center">
                                     <TITLE>Your Referral Link</TITLE>
-                                    <Input readOnly />
+                                    <Input readOnly margin="10px 0 10px 0" />
                                     <WithdrawBtn width="15%">Copy</WithdrawBtn>
                             </DIV>
                         </div>
