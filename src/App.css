@@ -9,8 +9,17 @@
   display: flex;
 }
 
+.row {
+  display: flex;
+  width: 100%;  
+}
+
 .p-20 {
   padding: 50px;
+}
+
+.p-30 {
+  padding-inline: 60px;
 }
 
 /* navbar component style */
@@ -47,12 +56,13 @@
   margin-bottom: 30px;
 }
 
-/* .sol-rising {
-  background: url('../public/images/download.jpg');
-  background-repeat: no-repeat;
-  background-size: 500px;  
-  background-position: center;
-} */
+.sol-rising {
+  width: 66.66666%;
+}
+
+.sol-status {
+  width: 33.33333%;
+}
 
 .stakingForm {
   /* flex-wrap: wrap; */
@@ -70,7 +80,6 @@
 }
 
 .col-md-6 {
-  flex: 0 0 auto;
   width: 50%;
 }
 
@@ -99,9 +108,47 @@
   min-height: 50px;
   padding: 20px   !important;
   height: 100%!important;
-  margin: 60px 0 30px 30px;
+  margin: 80px 0 30px 30px;
 }
 
 .yourStake {
   margin-left: 50px;
+}
+
+/* footer component style */
+
+.footer {
+  background-image: linear-gradient(from bottom to top, #453570 , #18121000);
+  height: 120px;
+  display: flex;
+  align-items: center;  
+  /* background: url('../public/images/footerbg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%; */
+  /* opacity: 0.7; */
+}
+
+.LogoForm {
+  display: flex;
+  align-items: center;
+}
+
+.scanForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dappRadarForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1150px) {
+  .explain-section {
+    display: block;    
+    text-align: center;
+  }
 }

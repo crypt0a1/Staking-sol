@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import solTokenIcon from "../../../public/images/soltoken.jpg";
 import StakingForm from "../../components/stakingForm";
 
 const Container = styled.div`
     background: url('https://maticfomo.io/background.bedd1bd0d09f79526fab..svg');
     height: 100%;
-    min-height: 2000px;
+    min-height: 1900px;
     width: 100%;
     padding-top: 100px;    
 `
@@ -18,7 +17,7 @@ const DIV = styled.div<{
     alignItem?: string
     justifyContent?: string
 }>`
-    width: ${({width}) => width??'100%'};
+    width: ${({width}) => width};
     padding: ${({padding}) => padding??'0'};
     display: ${({display}) => display??'block'};
     align-items: ${({alignItem}) => alignItem??''};
@@ -48,11 +47,12 @@ const Button = styled.button<{
     }
 `
 
-const Text = styled.span<{
+const Text = styled.div<{
     fontSize?: string
     fontColor?: string
     fontFamily?: string
     lineHeight?: string
+    angle?: string
 }>`
     transform: 0;
     font-family: ${({fontFamily}) => fontFamily??'Verdana,sans-serif'};
@@ -61,6 +61,7 @@ const Text = styled.span<{
     color: ${({fontColor}) => fontColor??'white'} ;
     letter-spacing: 2px;
     line-height: ${({lineHeight}) => lineHeight};
+    transform: ${({angle}) => angle};
 `
 const Logo = styled.img`
     border-radius: 100%;
@@ -95,14 +96,13 @@ const DESCRIPTION = styled.p<{
 `
 
 const StatisticsForm = styled.div`
-    width: 82%;
+    width: 76%;
     // padding: 10px;
     background-color: #25113e;
     border-radius: 10px;
     height: 100%;
     text-align: center;
-    // display: flex;
-    // justify-content: center;
+    padding-right: 20px;
 `
 const StakeInfoForm = styled.div`
     background-image: linear-gradient(to right, #453570 , #18121e4d);
@@ -110,7 +110,7 @@ const StakeInfoForm = styled.div`
     border-right: 0 !important;
     border-radius: 10px;
     min-height: 100px;
-    padding: 20px;
+    padding: 30px;
     flex-direction: column!important;
     display: flex;   
     height: 100%!important;
@@ -118,10 +118,12 @@ const StakeInfoForm = styled.div`
 
 const IMG = styled.img<{
     width?: string
+    height?: string
     borderRadius?: string    
 }>`
    border-radius: ${({borderRadius}) => borderRadius??'0px'} ;
    width: ${({width}) => width??'30px'};
+   height: ${({height}) => height}
 `
 const WithdrawBtn = styled.button<{
     width?:string
@@ -164,15 +166,15 @@ const Dashboard = () => {
         <Container>
             <div className="ref-btn-group">
                 <DIV width="60%" display="flex">
-                    <Button><Text>NFT airdrop</Text></Button>
-                    <Button><Text>YouTube Contest</Text></Button>
-                    <Button><Text>Documentation</Text></Button>
-                    <Button><Text>BSC Fomo</Text></Button>
-                    <Button><Text>SIL/USDT</Text></Button>
+                    <Button><Text angle="skewX(30deg)">NFT airdrop</Text></Button>
+                    <Button><Text angle="skewX(30deg)">YouTube Contest</Text></Button>
+                    <Button><Text angle="skewX(30deg)">Documentation</Text></Button>
+                    <Button><Text angle="skewX(30deg)">BSC Fomo</Text></Button>
+                    <Button><Text angle="skewX(30deg)">SIL/USDT</Text></Button>
                 </DIV>
             </div>
             <div className="explain-section">                
-                <DIV width="65%" padding="0 50px 0 80px" className="sol-rising">
+                <DIV padding="0 50px 0 80px" className="sol-rising">
                     <TITLE fontSize="25px" lineHeight="35px">
                         The SolV2 smart-contract provides the opportunity to invest any amount of Sol (from 5 Sol) in the contract.
                     </TITLE>
@@ -190,29 +192,29 @@ const Dashboard = () => {
 
                         3. Users can share referral links to earn bonus(at least 1 deposit to active the link), Referral bonuses will be automatically sent to the wallet.<br/>
                     </DESCRIPTION>
-                </DIV>
-                <DIV width="35%">
+                </DIV>                
+                <DIV className="sol-status">
                     <StatisticsForm>
                         <TITLE fontSize="30px" margin="15px 0 0 0">
                             Statistics
                         <hr className="static-hr" />                                 
                         </TITLE>               
                         <DIV display="flex" alignItem="center" padding="20px">
-                            <IMG src="" width="50px" borderRadius="100%" alt="url failed" />
+                            <IMG src="./images/sol-rising.jpg" width="50px" height="50px" borderRadius="50%" alt="url failed" />
                             <div>
                                 <TITLE fontSize="32px">1636259.490</TITLE>
                                 <DESCRIPTION fontSize="14px">Total Staked SOL</DESCRIPTION>
                             </div>
                         </DIV>
-                        <DIV display="flex" alignItem="center" justifyContent="right" padding="20px">                            
+                        <DIV display="flex" alignItem="center" justifyContent="right">                            
                             <div>
                                 <TITLE fontSize="32px">1636</TITLE>
                                 <DESCRIPTION fontSize="14px">Total Users</DESCRIPTION>
                             </div>
-                            <IMG src="" width="50px" borderRadius="100%" alt="url failed" />
+                            <IMG src="./images/users.svg" width="50px" height="50px" borderRadius="50%" alt="url failed" />
                         </DIV>
                         <DIV display="flex" alignItem="center" padding="20px">
-                            <IMG src="" width="50px" borderRadius="100%" alt="url failed" />
+                            <IMG src="./images/soltoken.jpg" width="50px" height="50px" borderRadius="50%" alt="url failed" />
                             <div>
                                 <TITLE fontSize="32px">152515.542</TITLE>
                                 <DESCRIPTION fontSize="14px">Ref Rewards (SOL)</DESCRIPTION>

@@ -5,7 +5,7 @@ import logo from './logo.png';
 const Container = styled.div<{
     theme?: string    
 }>`
-    background-color: ${({theme}) => theme??'#37113c'};
+    background-color: ${({theme}) => theme??'#2f0b34'};
     height: 80px;
     width: 100%;    
     display: flex;
@@ -31,7 +31,7 @@ const Button = styled.button<{
     flex: 1;
     transform: skewX(330deg);
     background-color: orchid;
-    border-radius: 3px;
+    border-radius: 7px;
     border: 0px;
     cursor: pointer;
     &:hover {
@@ -39,10 +39,11 @@ const Button = styled.button<{
         background-color: #974293;
     }
 `
-const Text = styled.span<{
+const Text = styled.div<{
     fontSize?: string
     fontColor?: string
     fontFamily?: string
+    angle?: string
 }>`
     transform: 0;
     font-family: ${({fontFamily}) => fontFamily??'Verdana,sans-serif'};
@@ -50,6 +51,7 @@ const Text = styled.span<{
     font-weight: 300px;
     color: ${({fontColor}) => fontColor??'white'} ;
     letter-spacing: 2px;
+    transform: ${({angle}) => angle};
 `
 const Logo = styled.img`
     border-radius: 100%;
@@ -60,19 +62,19 @@ const Logo = styled.img`
 const Navbar = () => {
 
     return (
-        <Container theme='#4b364e'>
+        <Container theme='#2f0b34'>
             <div className="logo">
                 <Logo src={logo} alt="logo" />
-                <Text fontFamily="fantasy" fontSize="21px" fontColor="#8d6aef">&nbsp; Earn Sol</Text>
+                <Text fontFamily="fantasy" fontSize="25px" fontColor="#8d6aef">&nbsp; Earn Sol</Text>
             </div>
             <div className="sol-token">
                 <Text fontSize="30px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>
             </div>
             <div className="btn-group">
-                <Button><Text>Audit</Text></Button>
-                <Button><Text>Telegram chat</Text></Button>
-                <Button><Text>Telegram channel</Text></Button>
-                <Button><Text>Contract</Text></Button>
+                <Button><Text angle="skewX(30deg)">Audit</Text></Button>
+                <Button><Text angle="skewX(30deg)">Telegram chat</Text></Button>
+                <Button><Text angle="skewX(30deg)">Telegram channel</Text></Button>
+                <Button><Text angle="skewX(30deg)">Contract</Text></Button>
                 <ConnectWallet />
             </div>
         </Container>

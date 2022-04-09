@@ -14,18 +14,19 @@ const Button = styled.button<{
     flex: 1;
     transform: skewX(330deg);
     background-color: orchid;
-    border-radius: 3px;
+    border-radius: 7px;
     border: 0px;
     &:hover {
         transition: all .2s ease-in-out;
         background-color: #974293;
     }
 `
-    const Text = styled.span`
+const Text = styled.div`
     transform: 0;
     font-family: Verdana,sans-serif;
     font-size: 14px;
     font-weight: 300px;
+    transform: skewX(30deg);
     color: ${({theme}) => theme==='light'?'black':'white'}        
 `
 
