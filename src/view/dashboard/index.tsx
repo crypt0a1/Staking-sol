@@ -96,13 +96,14 @@ const DESCRIPTION = styled.p<{
 `
 
 const StatisticsForm = styled.div`
-    width: 76%;
+    width: 75%;
     // padding: 10px;
     background-color: #25113e;
     border-radius: 10px;
     height: 100%;
     text-align: center;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 `
 const StakeInfoForm = styled.div`
     background-image: linear-gradient(to right, #453570 , #18121e4d);

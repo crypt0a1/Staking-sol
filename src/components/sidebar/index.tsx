@@ -24,7 +24,6 @@ const Container = styled.div<{
     top: 0px;    
     transition: 1s;
     transition-duration: 1s;
-    z-index: 666;
 `
 
 const Sidebar = (props:any) => {

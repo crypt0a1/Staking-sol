@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components"
 import ConnectWallet from "../connectWallet"
 import Sidebar from "../sidebar";
@@ -33,7 +33,7 @@ const Button = styled.button<{
     flex: 1;
     transform: skewX(330deg);
     background-color: orchid;
-    border-radius: 7px;
+    border-radius: 5px;
     border: 0px;
     cursor: pointer;
     &:hover {
@@ -66,7 +66,7 @@ const Navbar = () => {
     const [menuState, setMenuState] = useState(false);
 
     window.addEventListener("resize", () => {
-        console.log('width', window.innerWidth)
+        // console.log('width', window.innerWidth)
         if(window.innerWidth>1150) {            
             if(menuState) {                
                 setMenuState(false)
@@ -74,12 +74,14 @@ const Navbar = () => {
         }
     })
 
-    window.addEventListener("click", (e) => {
-        // if(e.target)     
-        if(menuState)    {
-            setMenuState(false)
-        }        
-    })
+    // window.addEventListener("click", (e) => {
+    //     if(e.target)  {
+
+    //     }   
+        // if(menuState)    {
+        //     setMenuState(false)
+        // }        
+    // })
 
     return (
         <>        

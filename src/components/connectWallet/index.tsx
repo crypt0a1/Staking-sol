@@ -14,7 +14,7 @@ const Button = styled.button<{
     flex: 1;
     transform: skewX(330deg);
     background-color: orchid;
-    border-radius: 7px;
+    border-radius: 5px;
     border: 0px;
     cursor: pointer;
     &:hover {

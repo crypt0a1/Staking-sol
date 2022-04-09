@@ -162,6 +162,7 @@
 }
 
 .sidebarForm {
+  margin-top: 100px;
   display: block;
   text-align: center;
 }
@@ -172,6 +173,10 @@
 
 .connectBtn {
   margin-top: 20px;
+}
+
+.menu:hover {
+  color: burlywood;
 }
 
 @media (max-width:1150px) {
