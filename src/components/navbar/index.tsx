@@ -5,7 +5,7 @@ import logo from './logo.png';
 const Container = styled.div<{
     theme?: string    
 }>`
-    background-color: ${({theme}) => theme??'#4b364e'};
+    background-color: ${({theme}) => theme??'#37113c'};
     height: 80px;
     width: 100%;    
     display: flex;
@@ -14,6 +14,7 @@ const Container = styled.div<{
     position: fixed;
     top: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 555;
 `
 
 const Button = styled.button<{
@@ -59,14 +60,13 @@ const Logo = styled.img`
 const Navbar = () => {
 
     return (
-        <>
         <Container theme='#4b364e'>
             <div className="logo">
                 <Logo src={logo} alt="logo" />
                 <Text fontFamily="fantasy" fontSize="21px" fontColor="#8d6aef">&nbsp; Earn Sol</Text>
             </div>
             <div className="sol-token">
-                <Text fontSize="20px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>
+                <Text fontSize="30px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>
             </div>
             <div className="btn-group">
                 <Button><Text>Audit</Text></Button>
@@ -76,7 +76,6 @@ const Navbar = () => {
                 <ConnectWallet />
             </div>
         </Container>
-        </>
     )
 }
 
