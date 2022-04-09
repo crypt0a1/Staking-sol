@@ -5,6 +5,14 @@
 
 /* common style */
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -145,10 +153,32 @@
   align-items: center;
   justify-content: center;
 }
-/* 
+
+.menu {
+  display: none;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.sidebarForm {
+  display: block;
+  text-align: center;
+}
+
+.bottom-border {
+  border-bottom: 2px solid white; 
+}
+
+.connectBtn {
+  margin-top: 20px;
+}
+
 @media (max-width:1150px) {
-  .explain-section {
-    display: block;    
-    text-align: center;
+  .btn-group {
+    display: none;
   }
-} */
+  .menu {
+    display: block;
+  }
+}

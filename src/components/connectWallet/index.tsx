@@ -8,7 +8,7 @@ const Button = styled.button<{
     theme?: string
     backgroundColor?: string
 }>`
-    width: ${({width}) => width??'100%'};  
+    width: ${({width}) => width};  
     padding: 5px;
     margin: 5px;    
     flex: 1;
@@ -16,6 +16,7 @@ const Button = styled.button<{
     background-color: orchid;
     border-radius: 7px;
     border: 0px;
+    cursor: pointer;
     &:hover {
         transition: all .2s ease-in-out;
         background-color: #974293;
@@ -34,7 +35,7 @@ const Text = styled.div`
 const ConnectWallet = () => {
 
     return (
-        <Button width="150px">
+        <Button width="130px">
             <Text>Connect Wallet</Text>
         </Button>
     )

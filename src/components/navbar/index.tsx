@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styled from "styled-components"
 import ConnectWallet from "../connectWallet"
+import Sidebar from "../sidebar";
 import logo from './logo.png';
 
 const Container = styled.div<{
@@ -61,7 +63,27 @@ const Logo = styled.img`
 
 const Navbar = () => {
 
+    const [menuState, setMenuState] = useState(false);
+
+    window.addEventListener("resize", () => {
+        console.log('width', window.innerWidth)
+        if(window.innerWidth>1150) {            
+            if(menuState) {                
+                setMenuState(false)
+            }            
+        }
+    })
+
+    window.addEventListener("click", (e) => {
+        // if(e.target)     
+        if(menuState)    {
+            setMenuState(false)
+        }        
+    })
+
     return (
+        <>        
+        <Sidebar showState={menuState} />        
         <Container theme='#2f0b34'>
             <div className="logo">
                 <Logo src={logo} alt="logo" />
@@ -70,14 +92,22 @@ const Navbar = () => {
             <div className="sol-token">
                 <Text fontSize="30px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>
             </div>
-            <div className="btn-group">
+            <div className="btn-group">    
                 <Button><Text angle="skewX(30deg)">Audit</Text></Button>
                 <Button><Text angle="skewX(30deg)">Telegram chat</Text></Button>
                 <Button><Text angle="skewX(30deg)">Telegram channel</Text></Button>
-                <Button><Text angle="skewX(30deg)">Contract</Text></Button>
+                <Button><Text angle="skewX(30deg)">Contract</Text></Button>                
                 <ConnectWallet />
+            </div>            
+            <div className="menu">
+                <a onClick={ () => setMenuState(!menuState)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                </a>
             </div>
         </Container>
+        </>
     )
 }
 
