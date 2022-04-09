@@ -96,9 +96,9 @@ const Navbar = () => {
             </div>
             <div className="btn-group">    
                 <Button><Text angle="skewX(30deg)">Audit</Text></Button>
+                <Button><Text angle="skewX(30deg)">Contract</Text></Button>  
                 <Button><Text angle="skewX(30deg)">Telegram chat</Text></Button>
-                <Button><Text angle="skewX(30deg)">Telegram channel</Text></Button>
-                <Button><Text angle="skewX(30deg)">Contract</Text></Button>                
+                <Button><Text angle="skewX(30deg)">Telegram channel</Text></Button>                              
                 <ConnectWallet />
             </div>            
             <div className="menu">

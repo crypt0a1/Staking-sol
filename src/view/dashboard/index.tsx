@@ -34,6 +34,7 @@ const Button = styled.button<{
 }>`
     width: ${({width}) => width??'100%'};  
     padding: 5px;
+    padding-inline: 10px !important;
     margin: 5px;    
     flex: 1;
     transform: skewX(330deg);
@@ -41,6 +42,7 @@ const Button = styled.button<{
     border-radius: 3px;
     border: 0px;
     cursor: pointer;
+    min-width: 130px;
     &:hover {
         transition: all .2s ease-in-out;
         background-color: #974293;
@@ -166,7 +168,7 @@ const Dashboard = () => {
     return (
         <Container>
             <div className="ref-btn-group">
-                <DIV width="60%" display="flex">
+                <DIV className="d-btnGroup flex-wrap" display="flex">
                     <Button><Text angle="skewX(30deg)">NFT airdrop</Text></Button>
                     <Button><Text angle="skewX(30deg)">YouTube Contest</Text></Button>
                     <Button><Text angle="skewX(30deg)">Documentation</Text></Button>
@@ -175,7 +177,7 @@ const Dashboard = () => {
                 </DIV>
             </div>
             <div className="explain-section">                
-                <DIV padding="0 50px 0 80px" className="sol-rising">
+                <DIV padding="0 50px 0 50px" className="sol-rising">
                     <TITLE fontSize="25px" lineHeight="35px">
                         The SolV2 smart-contract provides the opportunity to invest any amount of Sol (from 5 Sol) in the contract.
                     </TITLE>
@@ -227,18 +229,18 @@ const Dashboard = () => {
             </div>
             <div className="staking-section">
                 <DIV className="stakingForm" display="flex" width="100%">
-                    <DIV className="col-lg-4" margin="30px" display="flex" justifyContent="center">
+                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
                         <StakingForm />
                     </DIV>      
-                    <DIV className="col-lg-4" margin="30px" display="flex" justifyContent="center">
+                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
                         <StakingForm />
                     </DIV>      
-                    <DIV className="col-lg-4" margin="30px" display="flex" justifyContent="center">
+                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
                         <StakingForm />
                     </DIV>                
                 </DIV>
-                <DIV display="flex" width="100%" margin="50px 0 0 0" padding="0 0 0 30px">
-                    <div className="col-lg-4">
+                <DIV className="Info-section" display="flex" width="100%" margin="60px 0 0 0" padding="0 0 0 27px">
+                    <div className="colcol-lg-4">
                         <StakeInfoForm>
                             <Text fontColor="white" fontFamily="sans-serif">Total Staked MATIC</Text>
                             <TITLE margin="0 0 20px 0" color="#328ef9" fontWeight="700" fontSize="36px">0.000</TITLE>
@@ -251,7 +253,7 @@ const Dashboard = () => {
                             <WithdrawBtn width="35%">Withdraw</WithdrawBtn>
                         </StakeInfoForm>
                     </div>
-                    <div className="col-lg-8 p-20">                        
+                    <div className="col-lg-12 col-lg-8 p-20">                        
                         <DIV display="flex" justifyContent="center" className="level">
                             <TITLE fontSize="35px">Referral program</TITLE>
                         </DIV>
@@ -266,7 +268,7 @@ const Dashboard = () => {
                                     <Text>Referrals</Text>
                                 </div>
                             </DIV>
-                            <DIV display="flex" margin="20px 0 0 0" alignItem="center">
+                            <DIV className="flex-wrap" display="flex" margin="20px 20px 0 0" alignItem="center">
                                     <TITLE>Your Referral Link</TITLE>
                                     <Input readOnly />
                                     <WithdrawBtn width="15%">Copy</WithdrawBtn>
@@ -275,10 +277,12 @@ const Dashboard = () => {
                     </div>
                 </DIV>
                 <div className="nftBoxForm">
-                    <DIV display="flex" alignItem="center" width="100%">
-                        <TITLE fontSize="40px">AVAILABLE NFT BOXES</TITLE> 
-                        <TITLE fontSize="40px" margin="0 60px 0 60px" color="#328ef9">0</TITLE>
-                        <WithdrawBtn width="10%">Claim</WithdrawBtn>
+                    <DIV display="flex" className="flex-wrap" alignItem="center" justifyContent="center" width="100%">
+                        <TITLE className="nftBox" fontSize="40px">AVAILABLE NFT BOXES</TITLE>
+                        <div className="flex">
+                            <TITLE fontSize="40px" margin="0 60px 0 60px" color="#328ef9">0</TITLE>
+                            <WithdrawBtn width="10%">Claim</WithdrawBtn>
+                        </div> 
                     </DIV>
                 </div>
                 <div className="yourStake">
