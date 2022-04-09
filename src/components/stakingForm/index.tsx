@@ -142,7 +142,7 @@ const StakingForm = () => {
             <DIV margin="10px 0 0 0">
                 <Text fontSize="18px">Enter Amount</Text><br />
                 <Input /><br />
-                <Button>Stake MATIC</Button>
+                <Button>Stake SOL</Button>
             </DIV>            
         </Container>
     )    
