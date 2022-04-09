@@ -79,6 +79,7 @@ const Input = styled.input`
     padding: 7px;
     width: 70%;
     height: 25px;
+    text-align: center;
 `
 
 const Button = styled.button`

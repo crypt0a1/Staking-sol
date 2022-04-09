@@ -89,7 +89,7 @@ const Navbar = () => {
         <Container theme='#2f0b34'>
             <div className="logo">
                 <Logo src={logo} alt="logo" />
-                <Text fontFamily="fantasy" fontSize="25px" fontColor="#8d6aef">&nbsp; Earn Sol</Text>
+                <Text fontFamily="fantasy" fontSize="25px" fontColor="#8d6aef">&nbsp; SolanaFly</Text>
             </div>
             <div className="sol-token">
                 <Text fontSize="30px" fontColor="#00d7c3" fontFamily="fantasy">1 SOL = $100</Text>
