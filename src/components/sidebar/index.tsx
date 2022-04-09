@@ -24,6 +24,7 @@ const Container = styled.div<{
     top: 0px;    
     transition: 1s;
     transition-duration: 1s;
+    z-index: 3;
 `
 
 const Sidebar = (props:any) => {
@@ -46,6 +47,12 @@ const Sidebar = (props:any) => {
                 <div className="connectBtn">
                     <ConnectWallet />
                 </div>                
+                <div className="bottom-border foot-display">
+                    <Button>SolanaFly</Button>                    
+                </div>
+                <div className="bottom-border foot-display">
+                    <Button>Solscan</Button>                    
+                </div>
             </div>     
         </Container>      
     )

@@ -17,6 +17,10 @@
   display: flex;
 }
 
+.alignCenter {
+  align-items: center;
+}
+
 .row {
   display: flex;
   width: 100%;  
@@ -27,7 +31,7 @@
 }
 
 .p-30 {
-  padding-inline: 60px;
+  padding-inline: 30px;
 }
 
 /* navbar component style */
@@ -93,7 +97,7 @@
 }
 
 .staking-section {
-  padding: 0 40px 0 40px;
+  padding: 50px 40px 0 40px;
 }
 
 .level {    
@@ -183,7 +187,7 @@
 }
 
 .d-btnGroup {
-  width: 60%;
+  width: 70%;
 }
 
 .stake-column {
@@ -192,6 +196,14 @@
 
 .flex-wrap {
   flex-wrap: wrap;    
+}
+
+.foot-display {
+  display: none;
+}
+
+.foot-hide {
+  display: block;
 }
 
 @media (max-width:1150px) {
@@ -205,6 +217,7 @@
   .sol-rising {
     /* width: 60%; */
     margin-inline: 15% !important;
+    padding-left: 50px !important;
     width: 66.6666%;
   }
   .btn-group {
@@ -242,7 +255,7 @@
   .ref-btn-group {
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
+    padding-left: 50px !important;;
   }
 }
 
@@ -267,5 +280,13 @@
   } */
   .nftBoxForm {
     margin: 103px 0 30px 25px !important
+  }
+
+  .foot-display {
+    display: block;
+  }
+
+  .foot-hide {
+    display: none;
   }
 }

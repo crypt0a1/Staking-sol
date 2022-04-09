@@ -34,20 +34,26 @@ const Footbar = () => {
                 <div className="col-lg-4">      
                     <div className="LogoForm">
                         <IMG src="./images/footlogo.png" borderRadius="100%" width="60px" height="60px" alt="footlogo" /> &nbsp;
-                        <TITLE fontSize="30px">SOL Token</TITLE>
+                        <TITLE fontSize="25px">SOL Token</TITLE>
                     </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 foot-hide">
                     <div className="scanForm">
                         <a onClick={ () => window.open('https://dappradar.com/polygon/high-risk/maticfomo') }>
-                            <TITLE fontSize="30px">SOL Token</TITLE>
+                            <div className="flex alignCenter">
+                                <IMG src="./images/lightSol.jpg" borderRadius="100%" width="60px" height="60px" alt="footlogo" /> &nbsp;
+                                <TITLE fontSize="25px">SolanaFly</TITLE>
+                            </div>                            
                         </a>
                     </div>
                 </div>
-                <div className="col-lg-4">
-                    <div className="scanForm">
+                <div className="col-lg-4 foot-hide">
+                    <div className="scanForm"> 
                         <a onClick={ () => window.open('https://dappradar.com/polygon/high-risk/maticfomo') }>
-                            <TITLE fontSize="30px">Solscan</TITLE>
+                            <div className="flex alignCenter">
+                                <IMG src="./images/solscan.jpg" borderRadius="100%" width="60px" height="60px" alt="footlogo" /> &nbsp;
+                                <TITLE fontSize="25px">SOL Scan</TITLE>
+                            </div>                            
                         </a>
                     </div>
                 </div>

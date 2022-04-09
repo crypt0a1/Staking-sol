@@ -177,7 +177,7 @@ const Dashboard = () => {
                 </DIV>
             </div>
             <div className="explain-section">                
-                <DIV padding="0 50px 0 50px" className="sol-rising">
+                <DIV padding="0 50px 0 70px" className="sol-rising">
                     <TITLE fontSize="25px" lineHeight="35px">
                         The SolV2 smart-contract provides the opportunity to invest any amount of Sol (from 5 Sol) in the contract.
                     </TITLE>
@@ -280,7 +280,7 @@ const Dashboard = () => {
                     <DIV display="flex" className="flex-wrap" alignItem="center" justifyContent="center" width="100%">
                         <TITLE className="nftBox" fontSize="40px">AVAILABLE NFT BOXES</TITLE>
                         <div className="flex">
-                            <TITLE fontSize="40px" margin="0 60px 0 60px" color="#328ef9">0</TITLE>
+                            <TITLE fontSize="40px" margin="0 60px 0 30px" color="#328ef9">0</TITLE>
                             <WithdrawBtn width="10%">Claim</WithdrawBtn>
                         </div> 
                     </DIV>
