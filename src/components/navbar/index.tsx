@@ -39,7 +39,7 @@ const Button = styled.button<{
     &:hover {
         transition: all .2s ease-in-out;
         background-color: #974293;
-    }
+    }    
 `
 const Text = styled.div<{
     fontSize?: string

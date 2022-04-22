@@ -43,6 +43,7 @@ const Button = styled.button<{
     border: 0px;
     cursor: pointer;
     min-width: 130px;
+    min-height: 35px;
     &:hover {
         transition: all .2s ease-in-out;
         background-color: #974293;
@@ -178,7 +179,7 @@ const Dashboard = () => {
                     <Button><Text angle="skewX(30deg)">YouTube Contest</Text></Button>
                     <Button><Text angle="skewX(30deg)">Documentation</Text></Button>
                     <Button><Text angle="skewX(30deg)">BSC Fomo</Text></Button>
-                    <Button><Text angle="skewX(30deg)">SIL/USDT</Text></Button>
+                    <Button><Text angle="skewX(30deg)">SOL/USDT</Text></Button>
                 </DIV>
             </div>
             <div className="explain-section">                
@@ -189,7 +190,7 @@ const Dashboard = () => {
                     <DESCRIPTION>
                         Get 112% to 564% return on investment in 14 to 28 days （from 8% to 20% daily） <br/>
 
-                        Min. deposit: 5 MATIC and no max. limit.<br/>
+                        Min. deposit: 5 Sol and no max. limit.<br/>
 
                         Important notes:<br/>
 
@@ -247,11 +248,11 @@ const Dashboard = () => {
                 <DIV className="Info-section" display="flex" width="100%" margin="60px 0 0 0" padding="0 0 0 27px">
                     <div className="colcol-lg-4">
                         <StakeInfoForm>
-                            <Text fontColor="white" fontFamily="sans-serif">Total Staked MATIC</Text>
+                            <Text fontColor="white" fontFamily="sans-serif">Total Staked Sol</Text>
                             <TITLE margin="0 0 20px 0" color="#328ef9" fontWeight="700" fontSize="36px">0.000</TITLE>
-                            <Text fontColor="white"  fontFamily="sans-serif">Available MATIC for withdrawal</Text>
+                            <Text fontColor="white"  fontFamily="sans-serif">Available Sol for withdrawal</Text>
                             <TITLE margin="0 0 20px 0" color="#328ef9" fontWeight="700" fontSize="36px">0.00000</TITLE>
-                            <Text fontColor="white"  fontFamily="sans-serif">Withdrawn MATIC</Text>
+                            <Text fontColor="white"  fontFamily="sans-serif">Withdrawn Sol</Text>
                             <TITLE margin="0 0 20px 0" color="#328ef9" fontWeight="700" fontSize="36px">0.000</TITLE>
                             <Text fontColor="white">Hold Bonus</Text>
                             <TITLE margin="0 0 20px 0" color="#328ef9" fontWeight="700" fontSize="36px">1.5%</TITLE>
@@ -275,7 +276,7 @@ const Dashboard = () => {
                             </DIV>
                             <DIV className="flex-wrap" display="flex" margin="20px 20px 0 0" alignItem="center">
                                     <TITLE>Your Referral Link</TITLE>
-                                    <Input readOnly margin="10px 0 10px 0" />
+                                    <Input readOnly margin="10px 0 10px 0" value='https://spl.solana.com/stake-pool/quickstart' />
                                     <WithdrawBtn width="15%">Copy</WithdrawBtn>
                             </DIV>
                         </div>

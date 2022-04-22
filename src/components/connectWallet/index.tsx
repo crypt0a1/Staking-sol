@@ -132,7 +132,7 @@ const ConnectWallet = () => {
             }
             { !provider&&
                 <p>                
-                    <a href="https://phantom.app/"><Text>Install Wallet</Text></a>
+                    <a href="https://phantom.app/"><Text angle="330">Install Wallet</Text></a>
                 </p>
             }        
         </>        
