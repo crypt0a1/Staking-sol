@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { PublicKey, Transaction } from "@solana/web3.js"
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { account, setAccount } from "../../reducers/acountSlice";
 
 type DisplayEncoding = "utf8" | "hex";
 type PhantomEvent = "disconnect" | "connect" | "accountChanged";
@@ -68,10 +70,11 @@ const ConnectWallet = () => {
   const [provider, setProvider] = useState<PhantomProvider | undefined>(
     undefined
   );
-  const [walletKey, setWalletKey] = useState<PhantomProvider | undefined>(
-    undefined
-  );
-
+  // const [walletKey, setWalletKey] = useState<PhantomProvider | undefined>(
+  //   undefined
+  // );
+  const walletKey = useSelector(account);
+  const dispatch = useDispatch();
   const connectWallet = async () => {
     // @ts-ignore
     const { solana } = window;
@@ -80,7 +83,8 @@ const ConnectWallet = () => {
       try {
         const response = await solana.connect();
         console.log('wallet account ', response.publicKey.toString());
-        setWalletKey(response.publicKey.toString());
+        // setWalletKey(response.publicKey.toString());
+        dispatch(setAccount(response.publicKey.toString()));
       } catch (err) {
        // { code: 4001, message: 'User rejected the request.' }
       }
@@ -95,7 +99,8 @@ const ConnectWallet = () => {
 
    if (walletKey && solana) {
      await (solana as PhantomProvider).disconnect();
-     setWalletKey(undefined);
+    //  setWalletKey(undefined);
+     dispatch(setAccount(undefined));
    }
  };
     // detect phantom provider exists

@@ -167,6 +167,18 @@ const Input = styled.input<{
     margin: ${({margin}) => margin};
 `
 
+const stakingFormData1 = [
+    {index: 0, day:'10', withdrawal:'Any Time', totalReturn:'122', dailyProfit:'3'},
+    {index: 1, day:'15', withdrawal:'Any Time', totalReturn:'122', dailyProfit:'3'},
+    {index: 2, day:'20', withdrawal:'Any Time', totalReturn:'122', dailyProfit:'3'}
+]
+
+const stakingFormData2 = [
+    {index: 3, day:'10', withdrawal:'At the end', totalReturn:'122', dailyProfit:'3'},
+    {index: 4, day:'15', withdrawal:'At the end', totalReturn:'122', dailyProfit:'3'},
+    {index: 5, day:'20', withdrawal:'At the end', totalReturn:'122', dailyProfit:'3'}  
+]
+
 const Dashboard = () => {
 
     
@@ -235,16 +247,26 @@ const Dashboard = () => {
             </div>
             <div className="staking-section">
                 <DIV className="stakingForm" display="flex" width="100%">
-                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
-                        <StakingForm />
-                    </DIV>      
-                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
-                        <StakingForm />
-                    </DIV>      
-                    <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center">
-                        <StakingForm />
-                    </DIV>                
+                    { stakingFormData1.map((data) => {
+                        return (
+                            <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center" key={data.index} >
+                                <StakingForm formData={data} />
+                            </DIV>      
+                        )
+                    })
+                    }                                         
                 </DIV>
+                <DIV className="stakingForm" display="flex" width="100%" margin="80px 0 0 0">
+                    { stakingFormData2.map((data) => {
+                        return (
+                            <DIV className="col-md-12 col-md-6 col-lg-4 stake-column" display="flex" justifyContent="center" key={data.index} >
+                                <StakingForm formData={data} />
+                            </DIV>      
+                        )
+                    })
+                    }                     
+                </DIV>
+                
                 <DIV className="Info-section" display="flex" width="100%" margin="60px 0 0 0" padding="0 0 0 27px">
                     <div className="colcol-lg-4">
                         <StakeInfoForm>
